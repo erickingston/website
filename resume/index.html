@@ -7,11 +7,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.4;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
+            line-height: 1.5;
         }
         h1 {
             font-size: 24px;
@@ -34,7 +32,7 @@
             font-size: 14px;
             margin-bottom: 10px;
         }
-        .title-list {
+        .title {
             font-style: italic;
             font-size: 14px;
             margin-bottom: 15px;
@@ -45,52 +43,46 @@
         .job-title {
             font-weight: bold;
         }
-        .job-details {
+        .date-location {
             font-style: italic;
             font-size: 14px;
         }
         ul {
             padding-left: 20px;
         }
-        li {
-            margin-bottom: 5px;
-        }
-        .skills-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .skills-column {
-            flex: 1;
-        }
     </style>
 </head>
 <body>
     <h1>Eric Kingston</h1>
-    <div class="contact">
+    <p class="contact">
         Tampa, FL | (810) 423-2629 | <a href="mailto:erickingston@gmail.com">erickingston@gmail.com</a> | 
-        <a href="https://www.linkedin.com/in/eric-kingston" target="_blank">linkedin.com/in/eric-kingston</a>
-    </div>
-    <div class="title-list">
+        <a href="https://linkedin.com/in/eric-kingston" target="_blank">linkedin.com/in/eric-kingston</a>
+    </p>
+    <p class="title">
         <em>Creative Technical Architect | CTO | Director of Engineering | Salesforce ISV & DevOps Leader | 7+ AppExchange Apps Launched</em>
-    </div>
+    </p>
 
     <h2>Professional Summary</h2>
-    <p>Hands-on technical architect and engineering leader with over a decade of experience driving innovative Salesforce solutions, launching a multitude of AppExchange apps, scaling startups, and orchestrating large-scale projects and teams. Known for deep technical Salesforce expertise, process optimization, and fostering collaborative, growth-oriented teams—bridging technical vision with business impact through grit, adaptability, and mentorship.</p>
+    <p>
+        Hands-on technical architect and engineering leader with over a decade of experience driving innovative Salesforce solutions, launching high-impact AppExchange apps, scaling startups, and orchestrating large-scale projects and teams. Known for deep Salesforce expertise, process optimization, and building collaborative, high-performing teams—bridging technical vision with business impact through grit, adaptability, and mentorship.
+    </p>
 
     <h2>Key Achievements</h2>
     <ul>
         <li>Launched 7 Salesforce AppExchange apps across WebMD, Sirono, and Think Tech Labs, driving revenue and market expansion.</li>
         <li>Scaled Think Tech Labs from 5 to 60 engineers, achieving a 9-figure valuation and ranking #226 on Inc. 5000.</li>
-        <li>Fully automated deployments at WebMD, reducing delivery timelines by approximately 30%.</li>
+        <li>Fully automated deployments at WebMD, reducing delivery timelines by ~30%.</li>
         <li>Architected cloud solutions for 100k+ users, optimizing performance and scalability.</li>
     </ul>
 
     <h2>Professional Experience</h2>
+
     <div class="job">
         <h3><span class="job-title">WebMD (Salesforce ISV Partner & Enterprise Client)</span> — Director of Engineering</h3>
-        <p class="job-details">Austin, TX | Sep 2020 - Mar 2024</p>
-        <p>Led and worked alongside teams of up to 50+ engineers across product and services engineering, driving well-architected solutions, fostering cross-team collaboration, and optimizing DevOps processes while ensuring technical alignment with business goals.</p>
+        <p class="date-location">Austin, TX | Sep 2020 - Mar 2024</p>
+        <p>
+            Led and worked alongside teams of up to 50+ engineers across product and services engineering, driving well-architected solutions, fostering cross-team collaboration, and optimizing DevOps processes while aligning with business goals.
+        </p>
         <ul>
             <li>Launched 4 AppExchange apps in parallel via 4 teams, significantly boosting ISV portfolio revenue.</li>
             <li>Implemented fully automated deployments, reducing delivery timelines by ~30%.</li>
@@ -98,48 +90,56 @@
             <li>Guided OEM-to-ISV transition, enhancing scalability.</li>
         </ul>
     </div>
+
     <div class="job">
         <h3><span class="job-title">Sirono (Salesforce ISV Partner)</span> — Director of Engineering</h3>
-        <p class="job-details">Austin, TX | Sep 2019 - Jun 2020</p>
-        <p>Transformed prototypes into scalable Salesforce Health Cloud products.</p>
+        <p class="date-location">Austin, TX | Sep 2019 - Jun 2020</p>
+        <p>
+            Transformed early prototypes into scalable Salesforce Health Cloud products, leading development and DevOps efforts.
+        </p>
         <ul>
-            <li>Launched 1 AppExchange app in under 2 months, coding critical features.</li>
-            <li>Managed a 12-package ecosystem, ensuring performance and growth.</li>
+            <li>Developed and launched a new app, from whiteboard to AppExchange, in under 2 months.</li>
+            <li>Managed a large ecosystem of code—consisting of 12 unique packages—ensuring performance and growth.</li>
         </ul>
     </div>
+
     <div class="job">
         <h3><span class="job-title">Think Tech Labs (Salesforce ISV Partner)</span> — Chief Technology Officer</h3>
-        <p class="job-details">Austin, TX | Jan 2013 - Jan 2016</p>
-        <p>Scaled startup from 5 to 60 employees, architecting two top Salesforce products.</p>
+        <p class="date-location">Austin, TX | Jan 2013 - Jan 2016</p>
+        <p>
+            Scaled startup from 5 to 60 employees, architecting two top Salesforce real estate tech products.
+        </p>
         <ul>
-            <li>Launched 2 AppExchange apps, establishing leadership in real estate tech.</li>
-            <li>Defined 5-year roadmap and mentored high-performing engineering team.</li>
+            <li>Launched 2 AppExchange apps, establishing market leadership in real estate tech.</li>
+            <li>Defined 5-year technical roadmap, driving sustainable growth.</li>
+            <li>Mentored an elite engineering team, setting DevOps and development best practices.</li>
         </ul>
     </div>
+
     <div class="job">
         <h3><span class="job-title">Jackson National</span> — Software Developer</h3>
-        <p class="job-details">Lansing, MI | Jan 2010 - Jan 2013</p>
-        <p>Developed critical applications, leading small teams and optimizing legacy workflows.</p>
+        <p class="date-location">Lansing, MI | Jan 2010 - Jan 2013</p>
+        <p>
+            Developed critical enterprise applications, leading small teams and optimizing legacy workflows.
+        </p>
+        <ul>
+            <li>Designed and implemented mission-critical applications.</li>
+            <li>Contributed to IT standards and process optimization.</li>
+        </ul>
     </div>
 
-    <h2>Technical Skills</h2>
-    <div class="skills-section">
-        <div class="skills-column">
-            <strong>Development:</strong> Salesforce (Apex, Lightning, LWC, SFDX, Flow, Agentforce), Java, JavaScript
-        </div>
-        <div class="skills-column">
-            <strong>DevOps & Cloud:</strong> AWS, Docker, Git, Bitbucket Pipelines, CI/CD, automation
-        </div>
-        <div class="skills-column">
-            <strong>Databases:</strong> Relational (SQL), NoSQL, Salesforce Query (SOQL, SOSL), data optimization
-        </div>
-        <div class="skills-column">
-            <strong>Tools:</strong> VS Code, Jira, Jenkins, Illuminated Cloud via JetBrains
-        </div>
-    </div>
+    <h2>Technical Skills (i.e., Keywords/Buzzwords)</h2>
+    <ul>
+        <li><strong>Development:</strong> Salesforce (Apex, Lightning, LWC, SFDX, Flow, Agentforce), Java, JavaScript, and a spattering of others</li>
+        <li><strong>DevOps & Cloud:</strong> AWS, Docker, Git, Bitbucket Pipelines, CI/CD, automation</li>
+        <li><strong>Databases:</strong> Relational (SQL), NoSQL, Salesforce Query (SOQL, SOSL), data optimization</li>
+        <li><strong>Tools:</strong> VS Code, Jira, Atlassian Suite, Jenkins, Illuminated Cloud via JetBrains</li>
+    </ul>
 
     <h2>Education</h2>
-    <p><strong>University of Michigan</strong> — B.S., Computer Science<br>Flint, MI | Aug 2009</p>
-
+    <p>
+        <strong>University of Michigan</strong> — B.S., Computer Science<br>
+        Flint, MI | Aug 2009
+    </p>
 </body>
 </html>
