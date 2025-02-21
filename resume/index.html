@@ -4,63 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eric Kingston - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #2980b9;
+            --border-color: #3498db;
+            --text-muted: #7f8c8d;
+            --text-dark: #333;
+            --background-light: #f9f9f9;
+            --shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 20px auto;
-            line-height: 1.5;
+            font-family: 'Roboto', Arial, sans-serif;
+            max-width: 900px;
+            margin: 30px auto;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-light);
         }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
         h1 {
-            font-size: 24px;
-            margin-bottom: 5px;
+            font-size: 36px;
+            margin: 0;
+            color: var(--primary-color);
+            font-weight: 700;
         }
-        h2 {
-            font-size: 18px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #333;
+
+        .name-title {
+            margin-top: 5px;
+            font-style: italic;
+            font-size: 15px;
+            color: var(--text-muted);
         }
-        h3 {
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-        p, ul {
-            margin: 5px 0;
-        }
+
         .contact {
             font-size: 14px;
-            margin-bottom: 10px;
+            color: var(--text-dark);
+            text-align: right;
+            margin-right: 10px;
         }
-        .title {
-            font-style: italic;
-            font-size: 14px;
-            margin-bottom: 15px;
+
+        .contact-item {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
+
+        .contact-icon {
+            font-size: 16px;
+            color: var(--text-muted);
+        }
+
+        h2 {
+            font-size: 20px;
+            margin: 25px 0 10px;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
         .job {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: var(--shadow);
         }
+
         .job-title {
-            font-weight: bold;
+            font-weight: 700;
         }
+
         .date-location {
             font-style: italic;
             font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 5px;
         }
+
         ul {
             padding-left: 20px;
+            margin: 5px 0;
+        }
+
+        a {
+            color: var(--border-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .skills-columns {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 5px;
+        }
+
+        .skills-columns ul {
+            width: 48%;
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .contact {
+                margin: 10px 0 0 10px;
+                text-align: left;
+            }
+            .skills-columns {
+                flex-direction: column;
+            }
+            .skills-columns ul {
+                width: 100%;
+            }
+            h1 { font-size: 24px; }
+            h2 { font-size: 18px; }
+            h3 { font-size: 16px; }
+            .job { padding: 10px; }
         }
     </style>
 </head>
 <body>
-    <h1>Eric Kingston</h1>
-    <p class="contact">
-        Tampa, FL | (810) 423-2629 | <a href="mailto:erickingston@gmail.com">erickingston@gmail.com</a> | 
-        <a href="https://linkedin.com/in/eric-kingston" target="_blank">linkedin.com/in/eric-kingston</a>
-    </p>
-    <p class="title">
-        <em>Creative Technical Architect | CTO | Director of Engineering | Salesforce ISV & DevOps Leader | 7+ AppExchange Apps Launched</em>
-    </p>
+    <div class="header">
+        <div>
+            <h1>Eric Kingston</h1>
+            <p class="name-title">
+                Creative Technical Architect | CTO | Director of Engineering | Salesforce & DevOps Leader | Coder
+            </p>
+        </div>
+        <div class="contact">
+            <div class="contact-item"><span class="contact-icon">📍</span> Tampa, FL</div>
+            <div class="contact-item"><span class="contact-icon">📞</span> (810) 423-2629</div>
+            <div class="contact-item"><span class="contact-icon">✉️</span> <a href="mailto:erickingston@gmail.com">erickingston@gmail.com</a></div>
+            <div class="contact-item"><span class="contact-icon">🔗</span> <a href="https://linkedin.com/in/eric-kingston" target="_blank">linkedin.com/in/eric-kingston</a></div>
+        </div>
+    </div>
 
     <h2>Professional Summary</h2>
     <p>
@@ -129,12 +233,16 @@
     </div>
 
     <h2>Technical Skills (i.e., Keywords/Buzzwords)</h2>
-    <ul>
-        <li><strong>Development:</strong> Salesforce (Apex, Lightning, LWC, SFDX, Flow, Agentforce), Java, JavaScript, and a spattering of others</li>
-        <li><strong>DevOps & Cloud:</strong> AWS, Docker, Git, Bitbucket Pipelines, CI/CD, automation</li>
-        <li><strong>Databases:</strong> Relational (SQL), NoSQL, Salesforce Query (SOQL, SOSL), data optimization</li>
-        <li><strong>Tools:</strong> VS Code, Jira, Atlassian Suite, Jenkins, Illuminated Cloud via JetBrains</li>
-    </ul>
+    <div class="skills-columns">
+        <ul>
+            <li><strong>Development:</strong> Salesforce (Apex, Lightning, LWC, SFDX, Flow, Agentforce), Java, JavaScript, and a spattering of others</li>
+            <li><strong>DevOps & Cloud:</strong> AWS, Docker, Git, Bitbucket Pipelines, CI/CD, automation</li>
+        </ul>
+        <ul>
+            <li><strong>Databases:</strong> Relational (SQL), NoSQL, Salesforce Query (SOQL, SOSL), data optimization</li>
+            <li><strong>Tools:</strong> VS Code, Jira, Atlassian Suite, Jenkins, Illuminated Cloud via JetBrains</li>
+        </ul>
+    </div>
 
     <h2>Education</h2>
     <p>
