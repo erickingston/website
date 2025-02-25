@@ -1,0 +1,11 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="#000" stroke-width="4">
+    <!-- Rocket body -->
+    <path d="M50 20 L70 60 Q70 70 60 70 L40 70 Q30 70 30 60 Z" fill="#ff6200"/>
+    <!-- Rocket fins -->
+    <path d="M30 60 L20 80" stroke="#ff6200"/>
+    <path d="M70 60 L80 80" stroke="#ff6200"/>
+    <!-- Flame -->
+    <path d="M40 70 Q50 90 60 70" fill="#ffdd00"/>
+  </g>
+</svg>
