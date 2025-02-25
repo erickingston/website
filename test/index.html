@@ -12,14 +12,77 @@
             height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
+            overflow: hidden;
         }
-        img {
+        .rocket-container {
+            position: relative;
+            cursor: pointer;
+        }
+        .rocket {
             width: 200px;
             height: auto;
+            transition: transform 0.1s ease;
+        }
+        .smoke {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(150, 150, 150, 0.8) 20%, rgba(255, 255, 255, 0) 70%);
+            border-radius: 50%;
+            opacity: 0;
+            pointer-events: none;
+        }
+        /* Rumble animation */
+        @keyframes rumble {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+        /* Takeoff animation */
+        @keyframes takeoff {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-150vh); }
+        }
+        @keyframes smokeFade {
+            0% { opacity: 0; transform: scale(0.5) translateX(-50%); }
+            10% { opacity: 1; }
+            100% { opacity: 0; transform: scale(2) translateX(-50%); }
         }
     </style>
 </head>
 <body>
-    <img src="assets/rocket.svg" alt="Rocket Icon">
+    <div class="rocket-container" id="rocketContainer">
+        <img src="/assets/rocket.svg" alt="Rocket Icon" class="rocket" id="rocket">
+        <div class="smoke" id="smoke"></div>
+    </div>
+
+    <script>
+        const rocket = document.getElementById('rocket');
+        const smoke = document.getElementById('smoke');
+        const container = document.getElementById('rocketContainer');
+
+        container.addEventListener('click', () => {
+            // Rumble for 0.5 seconds
+            rocket.style.animation = 'rumble 0.1s ease 5';
+            
+            setTimeout(() => {
+                // Stop rumbling, start takeoff
+                rocket.style.animation = 'takeoff 1s ease forwards';
+                smoke.style.animation = 'smokeFade 1s ease forwards';
+            }, 500); // Delay takeoff by 0.5s to let rumble finish
+        });
+
+        // Reset after animation (optional, if you want it to reappear)
+        rocket.addEventListener('animationend', () => {
+            rocket.style.animation = '';
+            smoke.style.animation = '';
+            rocket.style.transform = 'translateY(0)';
+        });
+    </script>
 </body>
 </html>
