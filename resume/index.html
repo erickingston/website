@@ -22,33 +22,43 @@
 
         header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         h1 {
-            margin-bottom: 5px;
+            margin: 0;
+            font-size: 2em;
         }
 
         .subtitle {
+            margin-top: 8px;
+            margin-bottom: 6px;
             color: #555;
             font-weight: 600;
+            font-size: 1.05em;
+        }
+
+        header div:last-child {
+            font-size: 0.95em;
+            color: #333;
         }
 
         .section {
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
         .section h2 {
             border-bottom: 2px solid #eee;
             padding-bottom: 5px;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
+            font-size: 1.25em;
         }
 
         .section .inline-note {
-            font-size: 0.6em;
+            font-size: 0.65em;
             font-weight: normal;
             color: #888;
-            margin-left: 10px;
+            margin-left: 8px;
         }
 
         .job-title {
@@ -72,27 +82,38 @@
         .skills {
             display: flex;
             flex-wrap: wrap;
+            gap: 10px 0;
         }
 
         .skill-category {
             width: 50%;
+            padding-right: 10px;
+            box-sizing: border-box;
         }
 
         @media print {
-            body {
-                margin-top: 0 !important;
-                padding-top: 0 !important;
-            }
-            header {
-                margin-top: 0 !important;
-                padding-top: 0 !important;
-            }
             @page {
-                margin-top: 0;
                 size: letter;
+                margin-top: 0;
+                margin-bottom: 0.4in;
+                margin-left: 0.4in;
+                margin-right: 0.4in;
             }
-            body {
-                zoom: 0.92;
+
+            header {
+                margin-bottom: 20px;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1em;
+            }
+
+            .section {
+                font-size: 0.9em;
             }
         }
     </style>
@@ -102,7 +123,7 @@
     <header>
         <h1>Eric Kingston</h1>
         <div class="subtitle">Technical Architect | Leader | Mentor | Coder</div>
-        <div>Tampa, FL | (810) 423-2629 | <a href="mailto:erickingston@gmail.com">erickingston@gmail.com</a></div>
+        <div>Tampa, FL · (810) 423-2629 · <a href="mailto:erickingston@gmail.com">erickingston@gmail.com</a></div>
     </header>
 
     <div class="section">
