@@ -6,56 +6,57 @@
     <title>Eric Kingston Resume</title>
     <style>
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
-            color: #1a202c;
-            font-size: 12pt;
+            background-color: #f5f7f6;
+            color: #2d3748;
+            font-size: 13pt;
             line-height: 1.5;
         }
         .container {
             width: 7.5in;
-            margin: 0.2in auto 0.5in;
+            margin: 0.05in auto 0.5in;
             padding: 0.4in;
+            background: linear-gradient(to bottom, #ffffff, #f5f7f6);
             box-sizing: border-box;
             max-width: 100%;
+            border-radius: 8px;
         }
         .header {
+            margin-bottom: 0.15in;
             text-align: left;
-            margin-bottom: 0.3in;
         }
         .header h1 {
             margin: 0;
-            font-size: 28pt;
+            font-size: 30pt;
             font-weight: 700;
             color: #2b6cb0;
         }
         .header h2 {
             margin: 0.1in 0;
-            font-size: 14pt;
+            font-size: 15pt;
             font-weight: 400;
             color: #4a5568;
         }
         .header p {
-            margin: 0.1in 0 0;
-            font-size: 11pt;
+            margin: 0.05in 0 0;
+            font-size: 12pt;
             color: #718096;
         }
         .section {
             margin-bottom: 0.2in;
         }
         .section h3 {
-            font-size: 14pt;
+            font-size: 15pt;
             font-weight: 600;
             color: #2b6cb0;
             margin: 0 0 0.15in;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
             display: inline;
+            letter-spacing: 0.3px;
         }
         .section .inline-note {
-            font-size: 11pt;
+            font-size: 12pt;
             color: #718096;
             font-weight: 400;
             margin-left: 0.3in;
@@ -65,13 +66,13 @@
             margin-bottom: 0.15in;
         }
         .job h4 {
-            font-size: 12pt;
+            font-size: 13pt;
             font-weight: 600;
             margin: 0;
-            color: #1a202c;
+            color: #2d3748;
         }
         .job .details {
-            font-size: 11pt;
+            font-size: 12pt;
             color: #718096;
             margin: 0.05in 0;
             font-weight: 300;
@@ -79,11 +80,11 @@
         .job ul {
             margin: 0.05in 0 0;
             padding-left: 0.2in;
-            list-style-type: square;
+            list-style-type: circle;
         }
         .job ul li {
             margin-bottom: 0.05in;
-            font-size: 11pt;
+            font-size: 12pt;
         }
         .skills-list {
             display: flex;
@@ -93,57 +94,59 @@
         }
         .skills-list div {
             flex: 1 1 48%;
-            font-size: 11pt;
+            font-size: 12pt;
         }
         .skills-list strong {
-            color: #2b6cb0;
+            color: #2d3748;
             font-weight: 600;
         }
         p {
             margin: 0 0 0.15in;
-            font-size: 11pt;
+            font-size: 12pt;
         }
         @media print {
             body {
                 margin: 0;
                 padding: 0;
-                font-size: 10pt;
+                font-size: 11pt;
+                background: #ffffff;
             }
             .container {
                 margin: 0;
-                padding: 0.3in;
+                padding: 0 0.3in;
                 width: 100%;
+                background: #ffffff;
                 box-shadow: none;
             }
             .header h1 {
-                font-size: 22pt;
+                font-size: 24pt;
             }
             .header h2 {
-                font-size: 11pt;
+                font-size: 12pt;
             }
             .header p {
-                font-size: 9pt;
-            }
-            .section h3 {
-                font-size: 11pt;
-            }
-            .section .inline-note {
-                font-size: 9pt;
-            }
-            .job h4 {
                 font-size: 10pt;
             }
+            .section h3 {
+                font-size: 12pt;
+            }
+            .section .inline-note {
+                font-size: 10pt;
+            }
+            .job h4 {
+                font-size: 11pt;
+            }
             .job .details {
-                font-size: 9pt;
+                font-size: 10pt;
             }
             .job ul li {
-                font-size: 9pt;
+                font-size: 10pt;
             }
             .skills-list div {
-                font-size: 9pt;
+                font-size: 10pt;
             }
             p {
-                font-size: 9pt;
+                font-size: 10pt;
             }
             @page {
                 size: letter;
@@ -152,55 +155,55 @@
         }
         @media screen and (max-width: 600px) {
             .container {
-                padding: 0.5rem;
+                padding: 0.75rem;
                 margin: 0.5rem;
-                width: calc(100% - 1rem);
+                width: calc(100% - 1.5rem);
             }
             .header h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
             .header h2 {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
             .header p {
-                font-size: 0.9rem;
-            }
-            .section h3 {
                 font-size: 1rem;
             }
+            .section h3 {
+                font-size: 1.1rem;
+            }
             .section .inline-note {
-                font-size: 0.9rem;
+                font-size: 1rem;
                 margin-left: 0.2rem;
             }
             .job h4 {
-                font-size: 0.95rem;
+                font-size: 1rem;
             }
             .job .details {
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
             .job ul {
                 padding-left: 1rem;
             }
             .job ul li {
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
             .skills-list div {
                 flex: 1 1 100%;
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
             p {
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>Eric Kingston</h1>
             <h2>Technical Architect | Leader | Mentor | Coder</h2>
-            <p>Tampa, FL · (810) 423-2629 · [email protected]</p>
+            <p>Tampa, FL · (810) 423-2629 · erickingston@gmail.com</p>
         </div>
         <div class="section">
             <h3>Professional Summary</h3>
@@ -209,28 +212,28 @@
         <div class="section">
             <h3>Experience</h3>
             <div class="job">
-                <h4>Director of Engineering, WebMD</h4>
+                <h4>Director of Engineering, WebMD (Salesforce ISV Partner & Enterprise Client)</h4>
                 <div class="details">Austin, TX | Sep 2020 - Mar 2024</div>
                 <ul>
-                    <li>Launched 3 AppExchange listings and led transition from Salesforce OEM to ISV</li>
+                    <li>Launched 3 AppExchange listings and led Salesforce partnership transition from OEM to ISV</li>
                     <li>Reduced delivery timelines by ~70% through automation and refined DevOps</li>
-                    <li>Guided migration of all Salesforce clients to WebMD's SaaS offerings</li>
-                    <li>Winner of 2024 company-wide hackathon</li>
+                    <li>Guided migration of all Salesforce clients to WebMD's proprietary SaaS offerings</li>
+                    <li>Bonus points: Winner of 2024 company-wide hackathon</li>
                 </ul>
             </div>
             <div class="job">
-                <h4>Director of Engineering, Sirono</h4>
+                <h4>Director of Engineering, Sirono (Salesforce ISV Partner)</h4>
                 <div class="details">Austin, TX | Sep 2019 - Jun 2020</div>
                 <ul>
                     <li>Rapidly developed and launched Salesforce Health Cloud applications</li>
                 </ul>
             </div>
             <div class="job">
-                <h4>Chief Technology Officer, Think Tech Labs</h4>
+                <h4>Chief Technology Officer, Think Tech Labs (Salesforce OEM Partner)</h4>
                 <div class="details">Austin, TX | Jan 2013 - Jan 2016</div>
                 <ul>
-                    <li>Scaled organization from 5 to 60+ employees, achieving a 9-figure valuation and #226 on Inc. 5000</li>
-                    <li>Developed Salesforce real estate products supporting over 100k users</li>
+                    <li>Scaled organization from 5 to 60+ employees, achieving a 9-figure valuation and #226 ranking on Inc. 5000</li>
+                    <li>Developed and launched Salesforce real estate products supporting over 100k users</li>
                 </ul>
             </div>
             <div class="job">
@@ -247,11 +250,11 @@
             <p>Bachelor of Computer Science, University of Michigan, Flint, MI (2009)</p>
         </div>
         <div class="section">
-            <h3>Technical Skills</h3>
+            <h3>Technical Skills/Buzzwords</h3>
             <span class="inline-note">(see LinkedIn for more details)</span>
             <div class="skills-list">
                 <div><strong>Languages:</strong> Salesforce (Apex, LWC, SFDX, ...), Java, JavaScript, and a myriad of others</div>
-                <div><strong>DevOps & Cloud:</strong> AWS, Docker, Bitbucket Pipelines, 1st/2nd Gen SF Packaging, Git, CI/CD, automation</div>
+                <div><strong>DevOps & Cloud:</strong> AWS, Docker, Bitbucket Pipelines, 1st/2nd Gen SF Packaging, Git, CI/CD automation</div>
                 <div><strong>Database:</strong> Relational (SQL), NoSQL, Salesforce Query (SOQL, SOSL), data optimization</div>
                 <div><strong>Tools:</strong> VS Code, Jira, Atlassian Suite, Jenkins, Illuminated Cloud/JetBrains</div>
             </div>
