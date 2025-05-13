@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,48 +19,85 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         header {
             text-align: center;
             margin-bottom: 30px;
         }
+
         h1 {
             margin-bottom: 5px;
         }
+
         .subtitle {
             color: #555;
             font-weight: 600;
         }
+
         .section {
             margin-top: 20px;
         }
+
         .section h2 {
             border-bottom: 2px solid #eee;
             padding-bottom: 5px;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
+
+        .section .inline-note {
+            font-size: 0.6em;
+            font-weight: normal;
+            color: #888;
+            margin-left: 10px;
+        }
+
         .job-title {
             font-weight: 600;
         }
+
         .job-duration {
             color: #777;
             font-size: 0.9em;
         }
+
         ul {
             margin-top: 5px;
             margin-bottom: 20px;
         }
+
         li {
             margin-bottom: 5px;
         }
+
         .skills {
             display: flex;
             flex-wrap: wrap;
         }
+
         .skill-category {
             width: 50%;
         }
+
+        @media print {
+            body {
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+            }
+            header {
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+            }
+            @page {
+                margin-top: 0;
+                size: letter;
+            }
+            body {
+                zoom: 0.92;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Eric Kingston</h1>
@@ -69,7 +107,10 @@
 
     <div class="section">
         <h2>Professional Summary</h2>
-        <p>Hands-on Technical Architect and Engineering Leader with over a decade of experience specializing in Salesforce/SaaS architecture, DevOps optimization, and building scalable enterprise applications. Adept at orchestrating and mentoring large, high-performing teams and aligning technical strategies with business objectives.</p>
+        <p>Hands-on Technical Architect and Engineering Leader with over a decade of experience specializing in
+            Salesforce/SaaS architecture, DevOps optimization, and building scalable enterprise applications. Adept at
+            orchestrating and mentoring large, high-performing teams and aligning technical strategies with business
+            objectives.</p>
     </div>
 
     <div class="section">
@@ -98,7 +139,8 @@
             <div class="job-title">Chief Technology Officer, Think Tech Labs (Salesforce OEM Partner)</div>
             <div class="job-duration">Austin, TX | Jan 2013 - Jan 2016</div>
             <ul>
-                <li>Scaled organization from 5 to 60+ employees, achieving a 9-figure valuation and #226 rankiong on Inc. 5000</li>
+                <li>Scaled organization from 5 to 60+ employees, achieving a 9-figure valuation and #226 ranking on Inc.
+                    5000</li>
                 <li>Developed and launched Salesforce real estate products supporting over 100k users</li>
             </ul>
         </div>
@@ -119,13 +161,18 @@
     </div>
 
     <div class="section">
-        <h2>Technical Skills (see LinkedIn for more details)</h2>
+        <h2>
+            Technical Skills/Buzzwords
+            <span class="inline-note">(see LinkedIn for more details)</span>
+        </h2>
         <div class="skills">
             <div class="skill-category">
-                <strong>Development:</strong> Salesforce (Apex, LWC, SFDX, ...), Java, JavaScript, and a myriad of others
+                <strong>Languages:</strong> Salesforce (Apex, LWC, SFDX, ...), Java, JavaScript, and a myriad of
+                others
             </div>
             <div class="skill-category">
-                <strong>DevOps & Cloud:</strong> AWS, Docker, Bitbucket Pipelines, 1st/2nd Gen SF Packaging, Git, CI/CD, automation
+                <strong>DevOps & Cloud:</strong> AWS, Docker, Bitbucket Pipelines, 1st/2nd Gen SF Packaging, Git, CI/CD,
+                automation
             </div>
             <div class="skill-category">
                 <strong>Database:</strong> Relational (SQL), NoSQL, Salesforce Query (SOQL, SOSL), data optimization
@@ -136,4 +183,5 @@
         </div>
     </div>
 </body>
+
 </html>
