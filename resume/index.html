@@ -1,208 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eric Kingston - Resume</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Eric Kingston Resume</title>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             margin: 0;
-            padding: 40px;
-            background: #ffffff;
-            color: #333;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            padding: 0;
+            background-color: #ffffff;
+            color: #1a202c;
+            font-size: 12pt;
+            line-height: 1.5;
         }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
+        .container {
+            width: 7.5in;
+            margin: 0.2in auto 0.5in;
+            padding: 0.4in;
+            box-sizing: border-box;
+            max-width: 100%;
         }
-
-        h1 {
+        .header {
+            text-align: left;
+            margin-bottom: 0.3in;
+        }
+        .header h1 {
             margin: 0;
-            font-size: 2em;
+            font-size: 28pt;
+            font-weight: 700;
+            color: #2b6cb0;
         }
-
-        .subtitle {
-            margin-top: 8px;
-            margin-bottom: 6px;
-            color: #555;
-            font-weight: 600;
-            font-size: 1.05em;
+        .header h2 {
+            margin: 0.1in 0;
+            font-size: 14pt;
+            font-weight: 400;
+            color: #4a5568;
         }
-
-        header div:last-child {
-            font-size: 0.95em;
-            color: #333;
+        .header p {
+            margin: 0.1in 0 0;
+            font-size: 11pt;
+            color: #718096;
         }
-
         .section {
-            margin-top: 25px;
+            margin-bottom: 0.2in;
         }
-
-        .section h2 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
-            margin-bottom: 6px;
-            font-size: 1.25em;
-        }
-
-        .section .inline-note {
-            font-size: 0.65em;
-            font-weight: normal;
-            color: #888;
-            margin-left: 8px;
-        }
-
-        .job-title {
+        .section h3 {
+            font-size: 14pt;
             font-weight: 600;
+            color: #2b6cb0;
+            margin: 0 0 0.15in;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline;
         }
-
-        .job-duration {
-            color: #777;
-            font-size: 0.9em;
+        .section .inline-note {
+            font-size: 11pt;
+            color: #718096;
+            font-weight: 400;
+            margin-left: 0.3in;
+            display: inline;
         }
-
-        ul {
-            margin-top: 5px;
-            margin-bottom: 20px;
+        .job {
+            margin-bottom: 0.15in;
         }
-
-        li {
-            margin-bottom: 5px;
+        .job h4 {
+            font-size: 12pt;
+            font-weight: 600;
+            margin: 0;
+            color: #1a202c;
         }
-
-        .skills {
+        .job .details {
+            font-size: 11pt;
+            color: #718096;
+            margin: 0.05in 0;
+            font-weight: 300;
+        }
+        .job ul {
+            margin: 0.05in 0 0;
+            padding-left: 0.2in;
+            list-style-type: square;
+        }
+        .job ul li {
+            margin-bottom: 0.05in;
+            font-size: 11pt;
+        }
+        .skills-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px 0;
+            gap: 0.1in;
+            margin-top: 0.1in;
         }
-
-        .skill-category {
-            width: 50%;
-            padding-right: 10px;
-            box-sizing: border-box;
+        .skills-list div {
+            flex: 1 1 48%;
+            font-size: 11pt;
         }
-
+        .skills-list strong {
+            color: #2b6cb0;
+            font-weight: 600;
+        }
+        p {
+            margin: 0 0 0.15in;
+            font-size: 11pt;
+        }
         @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                font-size: 10pt;
+            }
+            .container {
+                margin: 0;
+                padding: 0.3in;
+                width: 100%;
+                box-shadow: none;
+            }
+            .header h1 {
+                font-size: 22pt;
+            }
+            .header h2 {
+                font-size: 11pt;
+            }
+            .header p {
+                font-size: 9pt;
+            }
+            .section h3 {
+                font-size: 11pt;
+            }
+            .section .inline-note {
+                font-size: 9pt;
+            }
+            .job h4 {
+                font-size: 10pt;
+            }
+            .job .details {
+                font-size: 9pt;
+            }
+            .job ul li {
+                font-size: 9pt;
+            }
+            .skills-list div {
+                font-size: 9pt;
+            }
+            p {
+                font-size: 9pt;
+            }
             @page {
                 size: letter;
-                margin-top: 0;
-                margin-bottom: 0.4in;
-                margin-left: 0.4in;
-                margin-right: 0.4in;
+                margin: 0.5in;
             }
-
-            header {
-                margin-bottom: 20px;
+        }
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 0.5rem;
+                margin: 0.5rem;
+                width: calc(100% - 1rem);
             }
-
-            h1 {
-                font-size: 1.3em;
+            .header h1 {
+                font-size: 1.8rem;
             }
-
-            h2 {
-                font-size: 1em;
+            .header h2 {
+                font-size: 1rem;
             }
-
-            .section {
-                font-size: 0.9em;
+            .header p {
+                font-size: 0.9rem;
+            }
+            .section h3 {
+                font-size: 1rem;
+            }
+            .section .inline-note {
+                font-size: 0.9rem;
+                margin-left: 0.2rem;
+            }
+            .job h4 {
+                font-size: 0.95rem;
+            }
+            .job .details {
+                font-size: 0.9rem;
+            }
+            .job ul {
+                padding-left: 1rem;
+            }
+            .job ul li {
+                font-size: 0.9rem;
+            }
+            .skills-list div {
+                flex: 1 1 100%;
+                font-size: 0.9rem;
+            }
+            p {
+                font-size: 0.9rem;
             }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <h1>Eric Kingston</h1>
-        <div class="subtitle">Technical Architect | Leader | Mentor | Coder</div>
-        <div>Tampa, FL · (810) 423-2629 · <a href="mailto:erickingston@gmail.com">erickingston@gmail.com</a></div>
-    </header>
-
-    <div class="section">
-        <h2>Professional Summary</h2>
-        <p>Hands-on Technical Architect and Engineering Leader with over a decade of experience specializing in
-            Salesforce/SaaS architecture, DevOps optimization, and building scalable enterprise applications. Adept at
-            orchestrating and mentoring large, high-performing teams and aligning technical strategies with business
-            objectives.</p>
-    </div>
-
-    <div class="section">
-        <h2>Experience</h2>
-
-        <div>
-            <div class="job-title">Director of Engineering, WebMD (Salesforce ISV Partner & Enterprise Client)</div>
-            <div class="job-duration">Austin, TX | Sep 2020 - Mar 2024</div>
-            <ul>
-                <li>Launched 3 AppExchange listings and led company transition from Salesforce OEM to ISV</li>
-                <li>Reduced delivery timelines by ~70% through automation and refined DevOps</li>
-                <li>Guided complete migration of all Salesforce clients to WebMD's proprietary SaaS offerings</li>
-                <li>Bonus points: Winner of 2024 company-wide hackathon</li>
-            </ul>
+    <div class="container">
+        <div class="header">
+            <h1>Eric Kingston</h1>
+            <h2>Technical Architect | Leader | Mentor | Coder</h2>
+            <p>Tampa, FL · (810) 423-2629 · [email protected]</p>
         </div>
-
-        <div>
-            <div class="job-title">Director of Engineering, Sirono (Salesforce ISV Partner)</div>
-            <div class="job-duration">Austin, TX | Sep 2019 - Jun 2020</div>
-            <ul>
-                <li>Rapidly developed and launched Salesforce Health Cloud applications</li>
-            </ul>
+        <div class="section">
+            <h3>Professional Summary</h3>
+            <p>Hands-on Technical Architect and Engineering Leader with over a decade of experience specializing in Salesforce/SaaS architecture, DevOps optimization, and building scalable enterprise applications. Adept at orchestrating and mentoring large, high-performing teams and aligning technical strategies with business objectives.</p>
         </div>
-
-        <div>
-            <div class="job-title">Chief Technology Officer, Think Tech Labs (Salesforce OEM Partner)</div>
-            <div class="job-duration">Austin, TX | Jan 2013 - Jan 2016</div>
-            <ul>
-                <li>Scaled organization from 5 to 60+ employees, achieving a 9-figure valuation and #226 ranking on Inc.
-                    5000</li>
-                <li>Developed and launched Salesforce real estate products supporting over 100k users</li>
-            </ul>
+        <div class="section">
+            <h3>Experience</h3>
+            <div class="job">
+                <h4>Director of Engineering, WebMD</h4>
+                <div class="details">Austin, TX | Sep 2020 - Mar 2024</div>
+                <ul>
+                    <li>Launched 3 AppExchange listings and led transition from Salesforce OEM to ISV</li>
+                    <li>Reduced delivery timelines by ~70% through automation and refined DevOps</li>
+                    <li>Guided migration of all Salesforce clients to WebMD's SaaS offerings</li>
+                    <li>Winner of 2024 company-wide hackathon</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h4>Director of Engineering, Sirono</h4>
+                <div class="details">Austin, TX | Sep 2019 - Jun 2020</div>
+                <ul>
+                    <li>Rapidly developed and launched Salesforce Health Cloud applications</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h4>Chief Technology Officer, Think Tech Labs</h4>
+                <div class="details">Austin, TX | Jan 2013 - Jan 2016</div>
+                <ul>
+                    <li>Scaled organization from 5 to 60+ employees, achieving a 9-figure valuation and #226 on Inc. 5000</li>
+                    <li>Developed Salesforce real estate products supporting over 100k users</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h4>Software Developer, Jackson National</h4>
+                <div class="details">Lansing, MI | Jan 2010 - Jan 2013</div>
+                <ul>
+                    <li>Developed and optimized critical multi-system applications</li>
+                    <li>Member of IT Standards Appraisal Board</li>
+                </ul>
+            </div>
         </div>
-
-        <div>
-            <div class="job-title">Software Developer, Jackson National</div>
-            <div class="job-duration">Lansing, MI | Jan 2010 - Jan 2013</div>
-            <ul>
-                <li>Developed and optimized critical multi-system applications</li>
-                <li>Member of IT Standards Appraisal Board</li>
-            </ul>
+        <div class="section">
+            <h3>Education</h3>
+            <p>Bachelor of Computer Science, University of Michigan, Flint, MI (2009)</p>
         </div>
-    </div>
-
-    <div class="section">
-        <h2>Education</h2>
-        <div>Bachelor of Computer Science, University of Michigan, Flint, MI (2009)</div>
-    </div>
-
-    <div class="section">
-        <h2>
-            Technical Skills/Buzzwords
+        <div class="section">
+            <h3>Technical Skills</h3>
             <span class="inline-note">(see LinkedIn for more details)</span>
-        </h2>
-        <div class="skills">
-            <div class="skill-category">
-                <strong>Languages:</strong> Salesforce (Apex, LWC, SFDX, ...), Java, JavaScript, and a myriad of
-                others
-            </div>
-            <div class="skill-category">
-                <strong>DevOps & Cloud:</strong> AWS, Docker, Bitbucket Pipelines, 1st/2nd Gen SF Packaging, Git, CI/CD,
-                automation
-            </div>
-            <div class="skill-category">
-                <strong>Database:</strong> Relational (SQL), NoSQL, Salesforce Query (SOQL, SOSL), data optimization
-            </div>
-            <div class="skill-category">
-                <strong>Tools:</strong> VS Code, Jira, Atlassian Suite, Jenkins, Illuminated Cloud/JetBrains
+            <div class="skills-list">
+                <div><strong>Languages:</strong> Salesforce (Apex, LWC, SFDX, ...), Java, JavaScript, and a myriad of others</div>
+                <div><strong>DevOps & Cloud:</strong> AWS, Docker, Bitbucket Pipelines, 1st/2nd Gen SF Packaging, Git, CI/CD, automation</div>
+                <div><strong>Database:</strong> Relational (SQL), NoSQL, Salesforce Query (SOQL, SOSL), data optimization</div>
+                <div><strong>Tools:</strong> VS Code, Jira, Atlassian Suite, Jenkins, Illuminated Cloud/JetBrains</div>
             </div>
         </div>
     </div>
 </body>
-
 </html>
